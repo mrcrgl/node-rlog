@@ -1,0 +1,33 @@
+{
+  "name" : "rlog",
+  "description": "Log library with multiple transports: console [colored], file, network, socket",
+  "version" : "0.0.1",
+  "author" : "Marc Riegel <mail@marclab.de>",
+  "constributors" : [],
+  "bin": {
+    "server" : "./lib/server"
+  },
+  "scripts": {
+    "start" : "node ./server",
+    "test" : "vows --spec --isolate"
+  },
+  "dependencies": {
+    "dye"   : "0.x",
+    "strftime" : "x"
+  },
+  "devDependencies": {
+    "vows"    :  "*"
+  },
+  "engines" : {
+    "node" : "0.x"
+  },
+  "licence": "MIT",
+  "keywords": [
+    "log",
+    "remote",
+    "socket",
+    "file",
+    "color",
+    "network"
+  ]
+}
