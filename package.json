@@ -1,19 +1,19 @@
 {
-  "name" : "rlog",
+  "name" : "remotelog",
   "description": "Log library with multiple transports: console [colored], file, network, socket",
   "version" : "0.0.1",
   "author" : "Marc Riegel <mail@marclab.de>",
   "constributors" : [],
   "bin": {
-    "server" : "./lib/server"
+    "remotelogd" : "./bin/daemon.js"
   },
   "scripts": {
-    "start" : "node ./server",
     "test" : "vows --spec --isolate"
   },
   "dependencies": {
     "dye"   : "0.x",
-    "strftime" : "x"
+    "strftime" : "0.x",
+    "optimist": "0.x"
   },
   "devDependencies": {
     "vows"    :  "*"
