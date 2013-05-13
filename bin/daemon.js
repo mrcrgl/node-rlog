@@ -6,10 +6,10 @@
  *
  */
 
-var package = require('../package.json');
+var packageJson = require('../package.json');
 
 var argv = require('optimist')
-  .usage(package.name+' Version: '+package.version+'\nUsage: $0')
+  .usage(packageJson.name + ' Version: ' + packageJson.version + '\nUsage: $0')
   .alias('config', 'c')
   .describe('config', 'Path to configuration file')
   .argv;
@@ -17,6 +17,6 @@ var argv = require('optimist')
 
 var remotelogd = require('./../lib/rlogd');
 
-remotelogd.start(argv.c, function(msg) {
+remotelogd.start(argv.c, function (msg) {
   console.log(msg);
 });
