@@ -16,29 +16,30 @@ client.configure({
       colored: true,
       mute: []
     },
-    {
-      type: 'file',
-      file: '/Users/mriegel/Projects/node-logger/logfile-access.log',
-      mute: [
-        'info', 'warn', 'error', 'debug', 'deprecated'
-      ]
-    },
-    {
-      type: 'file',
-      file: '/Users/mriegel/Projects/node-logger/logfile-error.log',
-      mute: [
-        'info', 'warn', 'access', 'debug'
-      ]
-    },
+    /*{
+     type: 'file',
+     file: '/Users/mriegel/Projects/node-logger/logfile-access.log',
+     mute: [
+     'info', 'warn', 'error', 'debug', 'deprecated'
+     ]
+     },
+     {
+     type: 'file',
+     file: '/Users/mriegel/Projects/node-logger/logfile-error.log',
+     mute: [
+     'info', 'warn', 'access', 'debug'
+     ]
+     },*/
     {
       type: 'file',
       file: '/Users/mriegel/Projects/node-logger/logfile.log'
     },
     {
-      type: 'socket',
-      host: 'localhost',
-      port: '6969',
-      mute: ['info']
+      type: 'syslog',
+      proto: 'udp',
+      host: 'r300.bam.st',
+      port: '514',
+      mute: []
     }
   ]
 });
